@@ -23,8 +23,8 @@ void loop() {
 // Write from the EEPROM
 void writeEEPROM(int deviceaddress, unsigned int eeaddress, byte data ) {
   Wire.beginTransmission(deviceaddress);
-  Wire.write((int)(eeaddress >> 8));      //writes the MSB
-  Wire.write((int)(eeaddress & 0xFF));    //writes the LSB
+  Wire.write((int)(eeaddress >> 8));      // Writes MSB
+  Wire.write((int)(eeaddress & 0xFF));    // Writes LSB
   Wire.write(data);
   Wire.endTransmission();
   }
